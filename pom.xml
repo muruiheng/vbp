@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+	</parent>
+	<groupId>com.sgai.vbp</groupId>
+	<artifactId>vbp</artifactId>
+	<version>0.0.4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>vbp-util</module>
+		<module>vbp-log</module>
+		<module>vbp-dao</module>
+		<module>vbp-dao-mysql-starter</module>
+		<module>vbp-dao-oracle-starter</module>
+		<module>vbp-dao-sqlserver-starter</module>
+		<module>vbp-dao-hana-starter</module>
+		<module>vbp-web-starter</module>
+		<module>vbp-security-starter</module>
+		<module>vbp-admin</module>
+		<module>vbp-cache</module>
+	</modules>
+	<distributionManagement>
+		<repository>
+			<id>snapshots</id>
+			<name>sgai Snapshots Repository</name>
+			<url>http://10.1.249.242:8081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</distributionManagement>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>public</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.1.249.242:8081/nexus/content/groups/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf8</encoding>
+				</configuration>
+			</plugin>
+			<!-- 代码走查 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.5</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+	</build>
+</project>

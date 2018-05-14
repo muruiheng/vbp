@@ -1,0 +1,101 @@
+<!-- list -->
+<ul class="nav">
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span translate="aside.nav.HEADER">Navigation</span>
+  </li>
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="fa fa-fire-extinguisher text-success"></i>
+      <span class="font-bold" translate="aside.nav.SAFERUN">SAFERUN</span>
+    </a>
+    
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.SAFERUN">SAFERUN</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.sheepanalysis"> 
+         	<i class="icon icon-bar-chart "></i>
+            <span translate="aside.nav.saferun_item.sheep_anl"">sheep_anl</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.echart">
+        	<i class="icon icon-question "></i>
+          	<span translate="aside.nav.saferun_item.question_manager">question_manager</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- 系统设置 -->
+   <li class="line dk"></li>
+   	 <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="fa fa-gear icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.SYSTEM">SYSTEM</span>
+    </a>
+   	<ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.SYSTEM">SYSTEM</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v1">
+         <i class="icon-equalizer"></i>
+          <span  translate="aside.nav.system_item.LINE_MANAGER">LINE_MANAGER</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v2">
+         <i class="fa fa-sitemap "></i>
+         <span  translate="aside.nav.system_item.DEPT_MANAGER">DEPT_MANAGER</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v2">
+        <i class="fa fa-users "></i>
+         <span  translate="aside.nav.system_item.DRIVER_MANAGER">DRIVER_MANAGER</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v2">
+         <i class="fa fa-flash"></i>
+         <span  translate="aside.nav.system_item.DANGER_TYPE">DANGER_TYPE</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v2">
+           <i class="fa fa-fire"></i>
+         <span  translate="aside.nav.system_item.DANGER_ITEM">DANGER_ITEM</span>
+        </a>
+      </li>
+    </ul>
+    </li>
+    
+    
+  <!-- 用户信息 -->
+  <li class="line dk"></li>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+    <span translate="aside.nav.your_stuff.YOUR_STUFF">用户信息</span>
+  </li>  
+  <li>
+    <a ui-sref="app.page.profile">
+      <i class="icon-user icon text-success-lter"></i>
+      <span translate="aside.nav.your_stuff.PROFILE">个人主页</span>
+    </a>
+  </li>
+    
+</ul>
+<!-- / list -->

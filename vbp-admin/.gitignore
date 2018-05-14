@@ -1,0 +1,17 @@
+#project
+.settings/
+vbp-bi/target/
+vbp-bi/.settings/
+
+vbp-umc/.settings
+vbp-umc/target/
+
+vbp-config-client/.settings
+vbp-config-client/target/
+
+vbp-config/.settings
+vbp-config/target/
+
+vbp-bpm/.settings
+vbp-bpm/target/
+

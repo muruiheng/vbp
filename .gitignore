@@ -1,0 +1,10 @@
+#project
+.settings/
+sso-client/target/
+sso-client/.settings/
+
+uad-web/.settings
+uad-web/target/
+uad-web/src/main/webapp/WEB-INF/classes/
+uad-web/src/main/webapp/WEB-INF/lib/ 
+

@@ -1,0 +1,100 @@
+<div class="wrapper-md hbox hbox-auto-xs hbox-auto-sm"
+	ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = false; "
+	ng-controller="resourceManagerController">
+	<div class="row row-sm">
+		<div class="col-lg-3 col-md-3 col-sm-3">
+			<div class="panel panel-default">
+					      <div class="panel-heading font-bold">系统资源树</div>
+					        <div class="panel-body">
+					<abn-tree 
+						tree-data="treedata" 
+						tree-control="resource_tree"
+						on-select="node_selected(branch)" 
+						expand-level="2"
+						initial-selection="用户管理系统" 
+						icon-leaf="fa fa-file-o"
+						icon-expand="fa fa-plus" 
+						icon-collapse="fa fa-minus">
+					</abn-tree>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-lg-9 col-md-9 col-sm-9">
+				<div class="row row-sm">
+					<div class="col-sm-12">
+						<div class="panel panel-default">
+					      <div class="panel-heading font-bold">{{edit_title}}</div>
+					        <div class="panel-body">
+					          <form class="bs-example form-horizontal">
+					          
+					          	 <div class="form-group">
+					              <label class="col-lg-2 control-label">资源代码</label>
+					              <div class="col-lg-9">
+					                <input type="text" class="form-control" placeholder="资源代码 ,VBP001" value="{{node.mcode}}">
+					                <span class="help-block m-b-none">资源代码, 继承父节点代码，然后根据书序进行调整</span>
+					              </div>
+					            </div>
+					            
+					            <div class="form-group">
+					              <label class="col-lg-2 control-label">资源名称(中文)</label>
+					              <div class="col-lg-9">
+					                <input type="text" class="form-control" placeholder="资源名称" value="{{node.cnName}}">
+					                <span class="help-block m-b-none">中文资源名称</span>
+					              </div>
+					            </div>
+					            
+					            <div class="form-group">
+					              <label class="col-lg-2 control-label">Name(English)</label>
+					              <div class="col-lg-9">
+					                <input type="text" class="form-control" placeholder="Name" value="{{node.enName}}">
+					                <span class="help-block m-b-none">Resource Name</span>
+					              </div>
+					            </div>
+					            
+					            <div class="form-group">
+					              <label class="col-lg-2 control-label">资源类型</label>
+					              <div class="col-lg-9">
+					                <select class="form-control" >
+					                	<option value="1">菜单</option>
+					                	<option value="2">页面</option>
+					                	<option value="3">按钮</option>
+					                </select>
+					              </div>
+					            </div>
+					            
+					            <div class="form-group">
+					              <label class="col-lg-2 control-label">icon图标</label>
+					              <div class="col-lg-9">
+					                <input type="text" class="form-control" placeholder="icon"  value="{{node.icon}}">
+					              </div>
+					            </div>
+					            
+					            <div class="form-group">
+					              <label class="col-lg-2 control-label">资源地址</label>
+					              <div class="col-lg-9">
+					                <input type="text" class="form-control" placeholder="资源地址:/pageId/0101/{pageId}"  value="{{node.src}}">
+					              </div>
+					            </div>
+					          </form>
+					           <div class="form-group col-lg-offset-4">
+					           <div class="row row-sm ">
+									<div class="col-sm-3">
+					              		<button class="btn m-b-xs btn-sm btn-info btn-addon" ng-disabled="current_node_id==0"><i class="fa fa-edit"></i>新增</button>
+					              	</div>
+					              	<div class="col-sm-3">
+					              		<button class="btn m-b-xs btn-sm btn-info btn-addon" ng-disabled="$scope.node == null"><i class="fa fa-save"></i>保存</button>
+						            </div>
+						            <div class="col-sm-3">
+					              		<button class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-trash-o"></i>删除</button>
+					              	</div>
+					            </div>
+					        </div>
+					      </div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>

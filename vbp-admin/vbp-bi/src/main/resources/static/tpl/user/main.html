@@ -1,0 +1,51 @@
+<div class="wrapper-md hbox hbox-auto-xs hbox-auto-sm"
+	ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = false; "
+	ng-controller="userManagerController">
+	<div class="row row-sm">
+		<div class="col-lg-3 col-md-3 col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-heading font-bold">部门</div>
+				<div class="panel-body">
+					<abn-tree 
+						tree-data="treedata" 
+						tree-control="resource_tree" 
+						on-select="node_selected(branch)" expand-level="2"
+						initial-selection="部门" 
+						icon-leaf="fa fa-file-o"
+						icon-expand="fa fa-plus" 
+						icon-collapse="fa fa-minus"> 
+					</abn-tree>
+				</div>
+
+			</div>
+		</div>
+	
+		<div class="col-md-9 col-sm-9 bg-light lter b-b wrapper-md">
+			<div class="row row-sm">
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-heading font-bold">{{edit_title}}</div>
+						<div class="panel-body">
+							<div class="panel-heading">
+								<div class="row row-sm ">
+										<button class="btn m-b-xs btn-sm btn-info btn-addon" ng-disabled="current_node_id==0">
+											<i class="fa fa-edit"></i>新增
+										</button>
+										<button class="btn m-b-xs btn-sm btn-info btn-addon" ng-disabled="$scope.node == null">
+											<i class="fa fa-save"></i>保存
+										</button>
+										<button class="btn m-b-xs btn-sm btn-info btn-addon">
+											<i class="fa fa-trash-o"></i>删除
+										</button>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.sgai.vbp</groupId>
+		<artifactId>vbp</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</parent>
+	<artifactId>vbp-dao-hana-starter</artifactId>
+
+	<!-- 私有仓库 -->
+	<repositories>
+		<repository>
+			<id>RDC thirdparty</id>
+			<name>RDC thirdparty Repository</name>
+			<url>http://nexus.saas.sgaimcp.com/content/repositories/thirdparty</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>RDC thirdparty</id>
+			<name>RDC thirdparty Repository</name>
+			<url>http://nexus.saas.sgaimcp.com/content/repositories/thirdparty</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<properties>
+		<hana.version>2.0.9</hana.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.sap</groupId>
+			<artifactId>hana-jdbc</artifactId>
+			<version>${hana.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${parent.groupId}</groupId>
+			<artifactId>vbp-dao</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+	</dependencies>
+</project>

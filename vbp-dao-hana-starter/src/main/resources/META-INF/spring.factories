@@ -1,0 +1,4 @@
+# HanaDataSourceAutoConfiguration Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.sgai.vbp.dao.hana.autoconfigure.HanaDataSourceAutoConfiguration,\
+com.sgai.vbp.dao.hana.autoconfigure.HanaJdbcTemplateAutoConfiguration

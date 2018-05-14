@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.sgai.vbp</groupId>
+		<artifactId>vbp</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</parent>
+	<artifactId>vbp-dao-oracle-starter</artifactId>
+
+	<dependencies>
+	<!--  oracle jdbc-->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>${parent.groupId}</groupId>
+			<artifactId>vbp-util</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${parent.groupId}</groupId>
+			<artifactId>vbp-dao</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+	</dependencies>
+</project>

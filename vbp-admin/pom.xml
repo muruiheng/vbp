@@ -1,0 +1,17 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sgai.vbp</groupId>
+    <artifactId>vbp</artifactId>
+    <version>0.0.4-SNAPSHOT</version>
+  </parent>
+  <artifactId>vbp-admin</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>vbp-umc</module>
+  	<module>vbp-config</module>
+  	<module>vbp-bpm</module>
+  	<module>vbp-bi</module>
+  	<module>vbp-config-client</module>
+  </modules>
+</project>

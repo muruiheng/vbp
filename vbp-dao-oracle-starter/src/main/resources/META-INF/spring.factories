@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.sgai.vbp.dao.oracle.autoconfigure.OracleDataSourceAutoConfiguration,\
+com.sgai.vbp.dao.oracle.autoconfigure.OracleJdbcTemplateAutoConfiguration

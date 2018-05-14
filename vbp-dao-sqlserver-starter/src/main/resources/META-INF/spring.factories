@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.sgai.vbp.dao.sqlserver.autoconfigure.SqlServerDataSourceAutoConfiguration,\
+com.sgai.vbp.dao.sqlserver.autoconfigure.SqlServerJdbcTemplateAutoConfiguration
